@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    // ドロップされた画像のURLを表示する
     public func receiveImageDraggedOnMenubarIcon(for urls: [URL]) {
         print("🍎URL Detected!")
         for url in urls {
@@ -35,7 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.isVisible = true
         constructMenu()
     }
-    
     
     // アイコン選択時のメニューバー
     func constructMenu() {
@@ -69,6 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
 }
 
+// ステータスの常駐アイコン設定
 extension NSStatusBar {
     
     func draggableStatusItem(withLength length: CGFloat) -> NSStatusItem {
@@ -76,7 +77,8 @@ extension NSStatusBar {
         
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
-            button.registerForDraggedTypes([.fileURL, .tiff, .png, .URL, .string])
+            // アイコンに画像をドラッグした場合のイベント付与
+            //button.registerForDraggedTypes([.fileURL, .tiff, .png, .URL, .string])
         }
         
         return statusItem
@@ -88,68 +90,71 @@ extension NSStatusBarButton {
     
     // MARK: - Helper Methods
     
-    private func filteringOptions() -> [NSPasteboard.ReadingOptionKey : Any] {
-        return [.urlReadingContentsConformToTypes : NSImage.imageTypes]
-    }
-    
-    private func shouldAllowDrag(_ draggingInfo: NSDraggingInfo) -> Bool {
-        var canAccept = false
-        let pasteBoard = draggingInfo.draggingPasteboard
-        
-        if pasteBoard.canReadObject(forClasses: [NSURL.self], options: filteringOptions()) ||
-            pasteBoard.canReadObject(forClasses: [NSImage.self], options: filteringOptions()) {
-            canAccept = true
-        }
-        
-        return canAccept
-    }
-    
-    private func setDraggingInfo(isDragging: Bool) {
-        if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
-            appDelegate.changeMenubarIconImage(isDragging: isDragging)
-        }
-    }
-    
+//    private func filteringOptions() -> [NSPasteboard.ReadingOptionKey : Any] {
+//        return [.urlReadingContentsConformToTypes : NSImage.imageTypes]
+//    }
+//
+//    private func shouldAllowDrag(_ draggingInfo: NSDraggingInfo) -> Bool {
+//        var canAccept = false
+//        let pasteBoard = draggingInfo.draggingPasteboard
+//
+//        if pasteBoard.canReadObject(forClasses: [NSURL.self], options: filteringOptions()) ||
+//            pasteBoard.canReadObject(forClasses: [NSImage.self], options: filteringOptions()) {
+//            canAccept = true
+//        }
+//
+//        return canAccept
+//    }
+//
+//    private func setDraggingInfo(isDragging: Bool) {
+//        if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
+//            appDelegate.changeMenubarIconImage(isDragging: isDragging)
+//        }
+//    }
+//
     
     // MARK:- NSDraggingDestination Methods
     
-    open override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-        print("draggingEntered")
-        
-        let allow = shouldAllowDrag(sender)
-        setDraggingInfo(isDragging: allow)
-        
-        return allow ? .copy : NSDragOperation()
-    }
-    
-    
-    open override func draggingExited(_ sender: NSDraggingInfo?) {
-        setDraggingInfo(isDragging: false)
-    }
-    
-    
-    open override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-        
-        let pasteBoard = sender.draggingPasteboard
-        
-        // 今回はfileURLがドラッグされた場合のみ実装
-        if let urls = pasteBoard.readObjects(forClasses: [NSURL.self], options: filteringOptions()) as? [URL],
-            urls.count > 0,
-            urls[0].isFileURL {
-            
-            if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
-                appDelegate.receiveImageDraggedOnMenubarIcon(for: urls)
-            }
-            
-            return true
-        }
-        
-        return false
-    }
-    
-    
-    open override func draggingEnded(_ sender: NSDraggingInfo) {
-        setDraggingInfo(isDragging: false)
-        print("draggingEnded")
-    }
+    // 1.画像がビュー上にドラッグされると呼びされる。
+//    open override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+//        print("1_draggingEntered")
+//        
+//        let allow = shouldAllowDrag(sender)
+//        setDraggingInfo(isDragging: allow)
+//        
+//        return allow ? .copy : NSDragOperation()
+//    }
+//    
+//    // 2-1.ファイルがドロップされる発生するイベント
+//    open override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+//        print("2-1_performDragOperation")
+//        let pasteBoard = sender.draggingPasteboard
+//        
+//        // 今回はfileURLがドラッグされた場合のみ実装
+//        if let urls = pasteBoard.readObjects(forClasses: [NSURL.self], options: filteringOptions()) as? [URL],
+//            urls.count > 0,
+//            urls[0].isFileURL {
+//            
+//            if let appDelegate = NSApplication.shared.delegate as? AppDelegate {
+//                appDelegate.receiveImageDraggedOnMenubarIcon(for: urls)
+//            }
+//            
+//            return true
+//        }
+//        
+//        return false
+//    }
+//    
+//    // 2-2.ファイルがドロップが外されると発生するイベント
+//    open override func draggingExited(_ sender: NSDraggingInfo?) {
+//        print("2-2_draggingExited")
+//        setDraggingInfo(isDragging: false)
+//    }
+//    
+//    // 3.画像ドロップ処理終了後に呼び出されるイベント
+//    open override func draggingEnded(_ sender: NSDraggingInfo) {
+//        print("3_draggingEnded")
+//        setDraggingInfo(isDragging: false)
+//    }
+//    
 }
