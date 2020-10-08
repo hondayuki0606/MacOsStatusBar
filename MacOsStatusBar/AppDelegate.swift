@@ -23,13 +23,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    // ドロップされた画像のURLを表示する
-    public func receiveImageDraggedOnMenubarIcon(for urls: [URL]) {
-        print("🍎URL Detected!")
-        for url in urls {
-            print(url)
-        }
-    }
+//    // ドロップされた画像のURLを表示する
+//    public func receiveImageDraggedOnMenubarIcon(for urls: [URL]) {
+//        print("🍎URL Detected!")
+//        for url in urls {
+//            print(url)
+//        }
+//    }
     
     // アイコン表示・非表示設定
     func applicationDidFinishLaunching(_ aNotification: Notification) {
