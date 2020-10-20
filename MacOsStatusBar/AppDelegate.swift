@@ -33,9 +33,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func constructMenu() {
         let menu = NSMenu()
         // アイコン1番目
-        menu.addItem(NSMenuItem(title: "Print", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
-        // アイコン2番目
         menu.addItem(NSMenuItem(title: "Print1", action: #selector(AppDelegate.printQuote1(_:)), keyEquivalent: "P"))
+        // アイコン2番目
+        menu.addItem(NSMenuItem(title: "Print2", action: #selector(AppDelegate.printQuote2(_:)), keyEquivalent: "P"))
+        // アイコン3番目
+        menu.addItem(NSMenuItem(title: "Print3", action: #selector(AppDelegate.printQuote3(_:)), keyEquivalent: "P"))
         // アプリケーション終了処理を追加
         menu.addItem(NSMenuItem(title: "Quit Quotes", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
@@ -43,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // アイコン1番目選択時
-    @objc func printQuote(_ sender: Any?) {
+    @objc func printQuote1(_ sender: Any?) {
 
         // OKがクリックされた時の処理
         let client = FontDownloadDialog()
@@ -52,7 +54,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // アイコン2番目選択時
-    @objc func printQuote1(_ sender: Any?) {
+    @objc func printQuote2(_ sender: Any?) {
+        // OKがクリックされた時の処理
+        let client = FontDownloadDialog()
+        // サーバー処理実施
+        client.fontDownload1()
+    }
+    
+    // アイコン3番目選択時
+    @objc func printQuote3(_ sender: Any?) {
         // OKがクリックされた時の処理
         let client = FontDownloadDialog()
         // サーバー処理実施
