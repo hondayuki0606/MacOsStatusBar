@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AF8642BA252F03FC0054153A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642B9252F03FC0054153A /* AppDelegate.swift */; };
-		AF8642BC252F03FC0054153A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642BB252F03FC0054153A /* ViewController.swift */; };
+		AF8642BC252F03FC0054153A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642BB252F03FC0054153A /* LoginViewController.swift */; };
 		AF8642BE252F03FE0054153A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8642BD252F03FE0054153A /* Assets.xcassets */; };
 		AF8642C1252F03FE0054153A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8642BF252F03FE0054153A /* Main.storyboard */; };
 		AF8642CD252F03FE0054153A /* MacOsStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642CC252F03FE0054153A /* MacOsStatusBarTests.swift */; };
 		AF8642D8252F03FE0054153A /* MacOsStatusBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642D7252F03FE0054153A /* MacOsStatusBarUITests.swift */; };
+		AFFA4F5B253EE81E002DE8F2 /* FontDownloadDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F5A253EE81E002DE8F2 /* FontDownloadDialog.swift */; };
+		AFFA4F5E253EEE5F002DE8F2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F5D253EEE5F002DE8F2 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		AF8642B6252F03FC0054153A /* MacOsStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOsStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8642B9252F03FC0054153A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF8642BB252F03FC0054153A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF8642BB252F03FC0054153A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF8642BD252F03FE0054153A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8642C0252F03FE0054153A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF8642C2252F03FE0054153A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		AF8642D3252F03FE0054153A /* MacOsStatusBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacOsStatusBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8642D7252F03FE0054153A /* MacOsStatusBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOsStatusBarUITests.swift; sourceTree = "<group>"; };
 		AF8642D9252F03FE0054153A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFA4F5A253EE81E002DE8F2 /* FontDownloadDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDownloadDialog.swift; sourceTree = "<group>"; };
+		AFFA4F5D253EEE5F002DE8F2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 		AF8642B8252F03FC0054153A /* MacOsStatusBar */ = {
 			isa = PBXGroup;
 			children = (
+				AFFA4F5C253EECCB002DE8F2 /* WebService */,
+				AFFA4F5F253EEEBB002DE8F2 /* ViewController */,
+				AFFA4F59253EE7C4002DE8F2 /* ViewDialog */,
 				AF8642B9252F03FC0054153A /* AppDelegate.swift */,
-				AF8642BB252F03FC0054153A /* ViewController.swift */,
 				AF8642BD252F03FE0054153A /* Assets.xcassets */,
 				AF8642BF252F03FE0054153A /* Main.storyboard */,
 				AF8642C2252F03FE0054153A /* Info.plist */,
@@ -122,6 +128,30 @@
 				AF8642D9252F03FE0054153A /* Info.plist */,
 			);
 			path = MacOsStatusBarUITests;
+			sourceTree = "<group>";
+		};
+		AFFA4F59253EE7C4002DE8F2 /* ViewDialog */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA4F5A253EE81E002DE8F2 /* FontDownloadDialog.swift */,
+			);
+			path = ViewDialog;
+			sourceTree = "<group>";
+		};
+		AFFA4F5C253EECCB002DE8F2 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA4F5D253EEE5F002DE8F2 /* APIClient.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		AFFA4F5F253EEEBB002DE8F2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF8642BB252F03FC0054153A /* LoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8642BC252F03FC0054153A /* ViewController.swift in Sources */,
+				AFFA4F5B253EE81E002DE8F2 /* FontDownloadDialog.swift in Sources */,
+				AF8642BC252F03FC0054153A /* LoginViewController.swift in Sources */,
 				AF8642BA252F03FC0054153A /* AppDelegate.swift in Sources */,
+				AFFA4F5E253EEE5F002DE8F2 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
