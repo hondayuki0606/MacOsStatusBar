@@ -13,6 +13,9 @@
 		AF8642C1252F03FE0054153A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8642BF252F03FE0054153A /* Main.storyboard */; };
 		AF8642CD252F03FE0054153A /* MacOsStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642CC252F03FE0054153A /* MacOsStatusBarTests.swift */; };
 		AF8642D8252F03FE0054153A /* MacOsStatusBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642D7252F03FE0054153A /* MacOsStatusBarUITests.swift */; };
+		AFFA4F89254590D9002DE8F2 /* MOS_201A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F88254590D9002DE8F2 /* MOS_201A_ViewController.swift */; };
+		AFFA4F8B254590EE002DE8F2 /* MOS_202A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F8A254590EE002DE8F2 /* MOS_202A_ViewController.swift */; };
+		AFFA4F8D254590FF002DE8F2 /* MOS_203A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F8C254590FF002DE8F2 /* MOS_203A_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		AF8642D3252F03FE0054153A /* MacOsStatusBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacOsStatusBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8642D7252F03FE0054153A /* MacOsStatusBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOsStatusBarUITests.swift; sourceTree = "<group>"; };
 		AF8642D9252F03FE0054153A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFFA4F88254590D9002DE8F2 /* MOS_201A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_201A_ViewController.swift; sourceTree = "<group>"; };
+		AFFA4F8A254590EE002DE8F2 /* MOS_202A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_202A_ViewController.swift; sourceTree = "<group>"; };
+		AFFA4F8C254590FF002DE8F2 /* MOS_203A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_203A_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				AF8642BB252F03FC0054153A /* MOS_101A_ViewController.swift */,
+				AFFA4F88254590D9002DE8F2 /* MOS_201A_ViewController.swift */,
+				AFFA4F8A254590EE002DE8F2 /* MOS_202A_ViewController.swift */,
+				AFFA4F8C254590FF002DE8F2 /* MOS_203A_ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8642BC252F03FC0054153A /* MOS_101A_ViewController.swift in Sources */,
+				AFFA4F8B254590EE002DE8F2 /* MOS_202A_ViewController.swift in Sources */,
+				AFFA4F8D254590FF002DE8F2 /* MOS_203A_ViewController.swift in Sources */,
+				AFFA4F89254590D9002DE8F2 /* MOS_201A_ViewController.swift in Sources */,
 				AF8642BA252F03FC0054153A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
