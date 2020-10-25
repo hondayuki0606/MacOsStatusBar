@@ -96,6 +96,8 @@
 		AF8642B8252F03FC0054153A /* MacOsStatusBar */ = {
 			isa = PBXGroup;
 			children = (
+				AFFA4F8425458F9E002DE8F2 /* Util */,
+				AFFA4F8325458F93002DE8F2 /* src */,
 				AF8642B9252F03FC0054153A /* AppDelegate.swift */,
 				AF8642BB252F03FC0054153A /* ViewController.swift */,
 				AF8642BD252F03FE0054153A /* Assets.xcassets */,
@@ -122,6 +124,44 @@
 				AF8642D9252F03FE0054153A /* Info.plist */,
 			);
 			path = MacOsStatusBarUITests;
+			sourceTree = "<group>";
+		};
+		AFFA4F8325458F93002DE8F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA4F8525458FA7002DE8F2 /* ViewControllers */,
+				AFFA4F8625458FC4002DE8F2 /* ViewModels */,
+				AFFA4F8725458FEF002DE8F2 /* Models */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AFFA4F8425458F9E002DE8F2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AFFA4F8525458FA7002DE8F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFFA4F8625458FC4002DE8F2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AFFA4F8725458FEF002DE8F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
