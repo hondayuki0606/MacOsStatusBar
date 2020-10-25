@@ -16,6 +16,14 @@
 		AFFA4F89254590D9002DE8F2 /* MOS_201A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F88254590D9002DE8F2 /* MOS_201A_ViewController.swift */; };
 		AFFA4F8B254590EE002DE8F2 /* MOS_202A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F8A254590EE002DE8F2 /* MOS_202A_ViewController.swift */; };
 		AFFA4F8D254590FF002DE8F2 /* MOS_203A_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F8C254590FF002DE8F2 /* MOS_203A_ViewController.swift */; };
+		AFFA4F8F25459169002DE8F2 /* MOS_101A_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F8E25459169002DE8F2 /* MOS_101A_ViewModel.swift */; };
+		AFFA4F912545917B002DE8F2 /* MOS_201A_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F902545917B002DE8F2 /* MOS_201A_ViewModel.swift */; };
+		AFFA4F932545918B002DE8F2 /* MOS_202A_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F922545918B002DE8F2 /* MOS_202A_ViewModel.swift */; };
+		AFFA4F95254591A2002DE8F2 /* MOS_203A_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F94254591A2002DE8F2 /* MOS_203A_ViewModel.swift */; };
+		AFFA4F97254591FB002DE8F2 /* MOS_101A_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F96254591FB002DE8F2 /* MOS_101A_Model.swift */; };
+		AFFA4F992545920D002DE8F2 /* MOS_201A_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F982545920D002DE8F2 /* MOS_201A_Model.swift */; };
+		AFFA4F9B25459221002DE8F2 /* MOS_202A_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F9A25459221002DE8F2 /* MOS_202A_Model.swift */; };
+		AFFA4F9D25459233002DE8F2 /* MOS_203A_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA4F9C25459233002DE8F2 /* MOS_203A_Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,14 @@
 		AFFA4F88254590D9002DE8F2 /* MOS_201A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_201A_ViewController.swift; sourceTree = "<group>"; };
 		AFFA4F8A254590EE002DE8F2 /* MOS_202A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_202A_ViewController.swift; sourceTree = "<group>"; };
 		AFFA4F8C254590FF002DE8F2 /* MOS_203A_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_203A_ViewController.swift; sourceTree = "<group>"; };
+		AFFA4F8E25459169002DE8F2 /* MOS_101A_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_101A_ViewModel.swift; sourceTree = "<group>"; };
+		AFFA4F902545917B002DE8F2 /* MOS_201A_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_201A_ViewModel.swift; sourceTree = "<group>"; };
+		AFFA4F922545918B002DE8F2 /* MOS_202A_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_202A_ViewModel.swift; sourceTree = "<group>"; };
+		AFFA4F94254591A2002DE8F2 /* MOS_203A_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_203A_ViewModel.swift; sourceTree = "<group>"; };
+		AFFA4F96254591FB002DE8F2 /* MOS_101A_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_101A_Model.swift; sourceTree = "<group>"; };
+		AFFA4F982545920D002DE8F2 /* MOS_201A_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_201A_Model.swift; sourceTree = "<group>"; };
+		AFFA4F9A25459221002DE8F2 /* MOS_202A_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_202A_Model.swift; sourceTree = "<group>"; };
+		AFFA4F9C25459233002DE8F2 /* MOS_203A_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOS_203A_Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +178,10 @@
 		AFFA4F8625458FC4002DE8F2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AFFA4F8E25459169002DE8F2 /* MOS_101A_ViewModel.swift */,
+				AFFA4F902545917B002DE8F2 /* MOS_201A_ViewModel.swift */,
+				AFFA4F922545918B002DE8F2 /* MOS_202A_ViewModel.swift */,
+				AFFA4F94254591A2002DE8F2 /* MOS_203A_ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,6 +189,10 @@
 		AFFA4F8725458FEF002DE8F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFFA4F96254591FB002DE8F2 /* MOS_101A_Model.swift */,
+				AFFA4F982545920D002DE8F2 /* MOS_201A_Model.swift */,
+				AFFA4F9A25459221002DE8F2 /* MOS_202A_Model.swift */,
+				AFFA4F9C25459233002DE8F2 /* MOS_203A_Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,11 +327,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFA4F97254591FB002DE8F2 /* MOS_101A_Model.swift in Sources */,
 				AF8642BC252F03FC0054153A /* MOS_101A_ViewController.swift in Sources */,
+				AFFA4F992545920D002DE8F2 /* MOS_201A_Model.swift in Sources */,
+				AFFA4F9D25459233002DE8F2 /* MOS_203A_Model.swift in Sources */,
+				AFFA4F932545918B002DE8F2 /* MOS_202A_ViewModel.swift in Sources */,
 				AFFA4F8B254590EE002DE8F2 /* MOS_202A_ViewController.swift in Sources */,
 				AFFA4F8D254590FF002DE8F2 /* MOS_203A_ViewController.swift in Sources */,
+				AFFA4F95254591A2002DE8F2 /* MOS_203A_ViewModel.swift in Sources */,
 				AFFA4F89254590D9002DE8F2 /* MOS_201A_ViewController.swift in Sources */,
+				AFFA4F912545917B002DE8F2 /* MOS_201A_ViewModel.swift in Sources */,
 				AF8642BA252F03FC0054153A /* AppDelegate.swift in Sources */,
+				AFFA4F9B25459221002DE8F2 /* MOS_202A_Model.swift in Sources */,
+				AFFA4F8F25459169002DE8F2 /* MOS_101A_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
